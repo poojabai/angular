@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input  name="first-name" type="text" id="first-name1" />
+    <div id="name-error"></div>
+    <input id ="password" type="password" />
+
+    <button id ="button1" onclick="squar();">submit</button>
+    <button onclick="showPassword();">show password</button>
+    <button onclick="hidePassword();">Hide password</button>
+
+    <script>
+        let firstName = document.getElementById("first-name1");
+        let submit = document.getElementById("button1");
+        let passwordText = document.getElementById("password");
+        let nameError = document.getElementById("name-error");
+        function squar(){
+            let value = firstName.value;
+            if(isNaN(value)){
+                nameError.textContent = "Please Enter Number";
+                nameError.style.color = 'red';
+                firstName.value = '';
+                return;
+            }
+            nameError.textContent ="squar is = " + (value * value);
+            nameError.style.color = 'green';
+        }
+        function showPassword(){
+            passwordText.type = 'text';
+        }
+        function hidePassword(){
+            passwordText.type = 'password';
+        }
+       
+
+
+
+    </script>
+
+
+</body>
+</html>

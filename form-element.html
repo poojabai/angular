@@ -1,0 +1,53 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button{
+            height: 200px;
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <input  class="button" type="checkbox" id = "check1" value ="physics">
+    <input  class="button" type="checkbox" id = "check2" value ="math">
+    <input  class="button" type="checkbox" id = "check3" value="biology">
+    <input  class="button" type="checkbox" id = "check4" value="chemistry">
+    <button class ="button" id="button">click me!</button>
+    <script>
+        let checkbox = document.querySelectorAll("[type='checkbox']");
+        for(let c of checkbox){
+            c.onclick = (ev) =>{
+                alert(ev.target.value);
+            }
+        }
+
+
+
+
+        // let button = document.getElementById("button");
+        // button.onclick = (ev)=>{
+        //     let c = checkbox.checked ? 'check box selected' : 'checkbox unselected';
+        //     alert(c);
+        // };
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>

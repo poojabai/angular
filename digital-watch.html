@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .size{
+            display: inline-block;
+            width:150px;
+            font-size: 10em;    
+        }
+    </style>
+</head>
+<body>
+    
+    <span id="hour" class="size"></span>
+    <span id="michmich" class="size"></span>
+    <span id = "minutes" class="size"></span>
+    <span id="michmich2" class="size"></span>
+    <span id="second" class="size"></span>
+    <script>
+        let div = document.getElementById("michmich");
+        let michmich2 = document.getElementById("michmich2");
+        let hourSpan = document.getElementById("hour");
+        let minutesSpan = document.getElementById("minutes");
+        let secondSpan = document.getElementById("second");
+        
+        let flag = true;
+        let count = 5000;
+        function michmich(){
+            if(flag){
+                div.textContent = ":";
+                div.style.color ="red";
+                
+                michmich2.textContent = ":";
+                michmich2.style.color ="red";
+                flag = !flag;
+            }else{
+                michmich2.textContent ="";
+                div.textContent = "";
+                flag = !flag;
+            }
+            createTime(count);
+            count++;
+        }
+        setInterval(michmich,1000);
+        function createTime(second){
+            let hour = Math.floor(second/ 3600) ;
+            let reminder = second % 3600;
+            let minutes = Math.floor(reminder  / 60);
+            reminder = reminder % 60;
+            hourSpan.innerText = hour;
+            minutesSpan.innerText = minutes;
+            secondSpan.innerText = reminder;
+        }
+
+
+
+
+    </script>
+
+
+</body>
+</html>

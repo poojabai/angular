@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name">
+    <button id="add-record" onclick="addRecord();">add name</button>
+    <hr />
+    <div id = "list"></div>
+
+    <script>
+        let name = document.getElementById("name");
+        let addButton = document.getElementById("add-record");
+        let list = document.getElementById("list");
+        function addRecord(){
+            let div = document.createElement("div");
+            div.textContent = name.value;
+            list.appendChild(div);
+        }
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
